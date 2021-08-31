@@ -9,15 +9,26 @@ body {
 }
 
 .container {
-  width: 100%;
-  // height: rem(646); //tener cuidado con esto
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
-  // padding: rem(20) 0;
-  margin: rem(71) auto;
+  border-radius: rem(10);
+  overflow: hidden;
+  margin: rem(88) 0;
+}
+
+.subcontainer {
+  width: min-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  @include breakpoint(large){
+    width: auto;
+  }
 }
 
 footer {
-  color: var(--white-main-heading-stats);
+  // color: var(--white-main-heading-stats);
 }

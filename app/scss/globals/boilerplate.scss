@@ -1,3 +1,5 @@
+@use "../util" as *;
+
 html {
   font-size: 100%;
   box-sizing: border-box;
@@ -10,8 +12,9 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: var(--inter);
-  background: var(--very-dark-blue-bg-primary);
+  font-size: rem(15);
+  font-family: var(--lexend-deca);
+  background: var(--very-light-gray-bg-h-btn);
 }
 
 figure {

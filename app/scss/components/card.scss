@@ -1,0 +1,86 @@
+@use "../util" as *;
+
+.card {
+  width: rem(327);
+  // padding: rem(20) rem(49); //cambiar padding top/bottom
+  padding: rem(47) rem(49);
+
+  @include breakpoint(large){
+    padding-right: rem(30);
+  }
+
+  &-sedans {
+    background: var(--bright-orange);
+  }
+  &-suvs {
+    background: var(--dark-cyan);
+  }
+  &-luxury {
+    background: var(--very-dark-cyan);
+  }
+
+  &__figure {
+    width: rem(64);
+    height: rem(40);
+    // margin-top: rem(47);
+    margin-bottom: rem(41);
+    &-sedans {
+      background: url(../images/icon-sedans.svg)
+    }
+    &-suvs {
+      background: url(../images/icon-suvs.svg)
+    }
+    &-luxury {
+      background: url(../images/icon-luxury.svg)
+    }
+  }
+
+  &__title {
+    font-family: var(--big-shoulders-display);
+    font-weight: 700;
+    font-size: rem(40);
+    text-transform: uppercase;
+    color: var(--very-light-gray-bg-h-btn);
+    margin-bottom: rem(39);
+  }
+
+  &__description {
+    font-weight: 400;
+    color: var(--transparent-white-p);
+    line-height: rem(25);
+    margin-bottom: rem(28);
+
+    @include breakpoint(large){
+      letter-spacing: 1px;
+      // padding-right: rem(18);
+      margin-bottom: rem(86);
+    }
+  }
+
+  &__btn {
+    width: rem(146);
+    height: rem(48);
+    border-radius: rem(24);
+    background: var(--very-light-gray-bg-h-btn);
+    font-weight: 700;
+    letter-spacing: rem(1);
+    text-transform: capitalize;
+
+    @include breakpoint(large){
+      font-size: rem(16);
+      letter-spacing: 0;
+    }
+
+    &-sedans {
+      color: var(--bright-orange);
+    }
+    &-suvs {
+      color: var(--dark-cyan);
+    }
+    &-luxury {
+      color: var(--very-dark-cyan);
+    }
+    
+  }
+  
+}
