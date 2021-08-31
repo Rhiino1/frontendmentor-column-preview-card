@@ -1,20 +1,22 @@
-@use "../util" as *;
+@use "../util"as *;
 
 .card {
   width: rem(327);
   // padding: rem(20) rem(49); //cambiar padding top/bottom
   padding: rem(47) rem(49);
 
-  @include breakpoint(large){
+  @include breakpoint(large) {
     padding-right: rem(30);
   }
 
   &-sedans {
     background: var(--bright-orange);
   }
+
   &-suvs {
     background: var(--dark-cyan);
   }
+
   &-luxury {
     background: var(--very-dark-cyan);
   }
@@ -24,12 +26,15 @@
     height: rem(40);
     // margin-top: rem(47);
     margin-bottom: rem(41);
+
     &-sedans {
       background: url(../images/icon-sedans.svg)
     }
+
     &-suvs {
       background: url(../images/icon-suvs.svg)
     }
+
     &-luxury {
       background: url(../images/icon-luxury.svg)
     }
@@ -50,7 +55,7 @@
     line-height: rem(25);
     margin-bottom: rem(28);
 
-    @include breakpoint(large){
+    @include breakpoint(large) {
       letter-spacing: 1px;
       // padding-right: rem(18);
       margin-bottom: rem(86);
@@ -66,21 +71,42 @@
     letter-spacing: rem(1);
     text-transform: capitalize;
 
-    @include breakpoint(large){
+    @include breakpoint(large) {
       font-size: rem(16);
       letter-spacing: 0;
     }
 
+    &:active {
+      color: var(--very-light-gray-bg-h-btn);
+    }
+
     &-sedans {
       color: var(--bright-orange);
+
+      &:active {
+        border: rem(3) solid var(--very-light-gray-bg-h-btn);
+        background: var(--bright-orange);
+      }
     }
+
     &-suvs {
       color: var(--dark-cyan);
+
+      &:active {
+        border: rem(3) solid var(--very-light-gray-bg-h-btn);
+        background: var(--dark-cyan);
+      }
     }
+
     &-luxury {
       color: var(--very-dark-cyan);
+
+      &:active {
+        border: rem(3) solid var(--very-light-gray-bg-h-btn);
+        background: var(--very-dark-cyan);
+      }
     }
-    
+
   }
-  
+
 }
